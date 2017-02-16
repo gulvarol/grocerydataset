@@ -1,4 +1,4 @@
-# GROCERY DATASET
+# Grocery Dataset
 
 This repository contains annotation files and links for downloading images for the Grocery Dataset.
 
