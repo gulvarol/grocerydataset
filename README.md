@@ -1,22 +1,22 @@
-GROCERY DATASET
+# GROCERY DATASET
 
-*Image dataset collected from ~40 groceries, with 4 cameras.
-*10 product categories.
-*Created Spring 2014 - Idea Teknoloji, Istanbul, Turkey
-*Contact gulvarols[at]gmail[dot]com for any comments or questions about the dataset.
-*Please refer to the following publication if you use this dataset.
+This repository contains annotation files and links for downloading images for the Grocery Dataset.
 
-Varol, G., and Kuzu, R. S., "Toward Retail Product Recognition on Grocery Shelves," ICIVC'14.
+The Grocery Dataset is an image dataset:
+* Collected from ~40 groceries, with 4 cameras,
+* With 10 product categories,
+* Created Spring 2014 - Idea Teknoloji, Istanbul, Turkey.
 
-*************************************************************************************************************
+## Download links
+TO-DO
 
-Organization of the folders:
+## Organization of the folders
 
-*******************************
+### ShelfImages
+This folder contains 354 grocery images.
 
-- ShelfImages:
-		contains 354 grocery images.
-		The naming is as follows:
+The naming is as follows:
+```
 			"C<c>_P<p>_N<n>_S<s>_<i>.JPG"
 			where
 				<c> := camera id (1: iPhone5S, 2: iPhone4, 3: Sony Cybershot, 4: Nikon Coolpix)
@@ -24,28 +24,31 @@ Organization of the folders:
 				<n> := the rank of the top shelf on the image according to the planogram
 				<s> := number of shelves on the image
 				<i> := copy number
+```
+	
+### ProductImages
+This folder contains images from 10 different product categories numbered from 1-10. Each category has a separate directory.
 
-*******************************
-		
-- ProductImages:
-		contains images from 10 different product categories numbered from 1-10. Each category has a separate directory.
-		The naming is as follows:
-			"B<b>_N<N>.JPG"
+The naming is as follows:
+```
+		"B<b>_N<N>.JPG"
 			where
 				<b> := brand id
 				<n> := copy number
+```
 
-*******************************
 		
-- BrandImages:
-		contains the cropped versions of the ProductImages directory. The images are cropped so that only the brand logo remains.
+### BrandImages
 
-*******************************
+This folder contains the cropped versions of the ProductImages directory. The images are cropped so that only the brand logo remains.
 
-- ProductImagesFromShelves:
-		contains product images cropped from shelf images. They are divided into 10 product categories plus one negative category
-		where the products not belonging to any of the 10 classes are gathered.
-		The naming is as follows:
+
+### ProductImagesFromShelves
+
+This folder contains product images cropped from shelf images. They are divided into 10 product categories plus one negative category where the products not belonging to any of the 10 classes are gathered.
+
+The naming is as follows:
+```
 			"<shelf image name>_<x>_<y>_<w>_<h>.png"
 			where
 			<shelf image name>   := the source image where the image is cropped from
@@ -53,17 +56,20 @@ Organization of the folders:
 			<y>                  := y-coordinate of the image's top-left corner on the source image
 			<w>                  := width of the image on the source image
 			<h>                  := height of the image on the source image
-
-*******************************
+```
 
 -	BrandImagesFromShelves:
 		contains the cropped versions of the ProductImagesFromShelves directory. The images are cropped so that only the brand logo remains.
 
 *******************************
+## Annotation files
 
-- ANNOTATION.dat:
-		summarizes the annotation information of the shelf images into one text file. Each row explains one shelf image.
-		The format of one line is as follows:
+### annotation.txt
+This file summarizes the annotation information of the shelf images into one text file. Each row explains one shelf image.
+
+The format of one line is as follows:
+
+```
 			<shelf image name> <n> <x_1> <y_1> <w_1> <h_1> <b_1> <x_2> <y_2> <w_2> <h_2> <b_2> ... <x_n> <y_n> <w_n> <h_n> <b_n>
 			where
 			<shelf image name>   := shelf image name
@@ -73,8 +79,19 @@ Organization of the folders:
 			<w_i>                := width of the i'th product image
 			<h_i>                := height of the i'th product image
 			<b_i>                := brand of the i'th product image
-	
-*******************************
+```
 
-- subset.txt
-		lists the names of the image files used for training and testing. It is a subset of the BrandImages and BrandImagesFromShelves contents.
+### subset.txt
+This file lists the names of the image files used for training and testing. It is a subset of the BrandImages and BrandImagesFromShelves contents.
+
+## Citation
+If you use this dataset, please cite the following:
+> @article{varol16a,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TITLE = {{Toward Retail Product Recognition on Grocery Shelves}},  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AUTHOR = {Varol, G{\"u}l and Kuzu, Ridvan S.},  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOURNAL =  {ICIVC},  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YEAR = {2014}  
+}
+
+## Acknowledgements
+The dataset is collected as part of a TUBITAK funded project carried out by Idea Teknoloji.
