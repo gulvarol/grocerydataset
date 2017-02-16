@@ -58,8 +58,8 @@ The naming is as follows:
 			<h>                  := height of the image on the source image
 ```
 
--	BrandImagesFromShelves:
-		contains the cropped versions of the ProductImagesFromShelves directory. The images are cropped so that only the brand logo remains.
+### BrandImagesFromShelves:
+This folder contains the cropped versions of the ProductImagesFromShelves directory. The images are cropped so that only the brand logo remains.
 
 *******************************
 ## Annotation files
