@@ -8,7 +8,7 @@ The Grocery Dataset is an image dataset:
 * Created Spring 2014 - Idea Teknoloji, Istanbul, Turkey.
 
 ## Download links
-TO-DO
+Here are [part1](https://github.com/gulvarol/grocerydataset/releases/download/1.0/GroceryDataset_part1.tar.gz) and [part2](https://github.com/gulvarol/grocerydataset/releases/download/1.0/GroceryDataset_part2.tar.gz) for downloading the image files. The total disk space is around 3GB. You can equally find these links under the releases of this repository. 
 
 ## Organization of the folders
 
