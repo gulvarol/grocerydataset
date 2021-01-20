@@ -97,3 +97,8 @@ If you use this dataset, please cite the following:
 
 ## Acknowledgements
 The dataset is collected as part of a TUBITAK funded project carried out by Idea Teknoloji.
+
+## Open-source contributions
+[sayakpaul](https://github.com/sayakpaul) has developed https://github.com/sayakpaul/Grocery-Product-Detection repository demonstrating training an object detection model with this dataset.
+
+
